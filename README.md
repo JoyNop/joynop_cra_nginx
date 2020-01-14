@@ -26,6 +26,6 @@ docker run --name testnginx -d -p 10086:80 testnginx
 ```
 ## 特性
 
-1. 支持路由重写，详情见`rewrite/app.rewrite.conf`
-2. 默认增加对VUE-ROUTER/REACT ROUTER 中browserhistory的支持
-3. 搭配后端API接口版本，无需编译后的代码，无需环境变量
+1. 访问重定向，详情见`rewrite/app.rewrite.conf`
+2. 默认增加对VUE-ROUTER/REACT ROUTER 中`browserhistory`的支持
+3. 快速适应后端API更迭版本，无需修改前端app代码，无需环境变量
