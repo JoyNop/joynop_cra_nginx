@@ -6,24 +6,36 @@
 ## 操作
 
 ```bash
-docker pull joynop/testnginx
+docker pull joynop/joynop_nginx_test
 ```
 
 
 ```bash
-docker run --name testnginx -d -p 10086:80 testnginx
+docker run --name joynop_nginx_test -d -p 10086:80 joynop_nginx_test
 ```
 
 可以GIT本仓库代码，将VUE/REACT前端build完成后代码放入`app`文件夹中
 
+### http访问
 
 ```bash
-docker build -t testnginx .
+docker build -t joynop_nginx_test .
 ```
 
 ```bash
-docker run --name testnginx -d -p 10086:80 testnginx
+docker run --name joynop_nginx_test -d -p 10086:80 joynop_nginx_test
 ```
+
+### https访问
+
+将`https.conf`中内容复制到`default.conf`
+
+```bash
+docker build -t joynop_nginx_test .
+docker run --name joynop_nginx_test -it -p 10088:80  -p 443:443 joynop_nginx_test 
+```
+通过浏览器访问 https://localhost 即可
+
 ## 特性
 
 1. 访问重定向，详情见`rewrite/app.rewrite.conf`
