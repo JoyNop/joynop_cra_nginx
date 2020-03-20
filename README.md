@@ -14,7 +14,7 @@ docker pull joynop/joynop_nginx_test
 docker run --name joynop_nginx_test -it -p 10088:80  -p 443:443 joynop/joynop_nginx_test
 ```
 
-可以GIT本仓库代码，将VUE/REACT前端build完成后代码放入`app`文件夹中
+可以GIT本仓库代码，将build完成后代码放入`app`文件夹中
 
 ### http访问
 
