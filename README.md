@@ -43,3 +43,6 @@ docker run --name joynop_nginx_test -it -p 10088:80  -p 443:443 joynop_nginx_tes
 1. 访问重定向，详情见`rewrite/app.rewrite.conf`
 2. 默认增加对VUE-ROUTER/REACT ROUTER 中`browserhistory`的支持
 3. 快速适应后端API更迭版本，无需修改前端app代码，无需环境变量
+
+
+**请注意：若您的服务中有多个网站，通过某个中心NGINX代理，请确保他们在同一网络内`--net`**
